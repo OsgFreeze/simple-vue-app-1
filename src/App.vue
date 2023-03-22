@@ -1,13 +1,13 @@
 <template>
     <div> 
       <h1> Barcode App</h1>
-      <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+      <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded" id="readerID"></StreamBarcodeReader>
       <div> 
         <p> deine gescannte Information: {{ ScannData }}</p>
       </div>
 
       <div> 
-          <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg" /> 
+          <img id="ProductPictureID" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg" /> 
       </div>
     </div>
 </template>
@@ -40,4 +40,11 @@ export default {
 </script>
 
 <style >
+#readerID {
+  background-color: brown;
+}
+#ProductPictureID {
+  width: 150px;
+  height: 150px;
+}
 </style>
