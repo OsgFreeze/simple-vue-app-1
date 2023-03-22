@@ -6,8 +6,11 @@
 import { StreamBarcodeReader } from "vue-barcode-reader";
 
 export default {
-  name: 'app',
+  components: {
+    StreamBarcodeReader
+  }
 }
+
 </script>
 
 <style >
