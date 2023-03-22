@@ -12,6 +12,9 @@ export default {
   data() {
     return {
       ScannData: "text",
+     Kreide: {
+      name: "Atla", Qualität: "für alle Tafeln geeignet"
+      }
     }
   },
   components: {
@@ -20,9 +23,12 @@ export default {
    methods: {
      onDecode (result) { 
       this.ScannData = result;
-
-      console.log(result) } 
+      console.log(result) 
+      if(result == "4059549000152"){
+        console.log("funktioniert");
+      }  
     }
+  }
 }
 </script>
 
