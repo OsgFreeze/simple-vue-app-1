@@ -14,8 +14,8 @@
         <img id="ProductPictureID" src='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg' /> 
       </div>
       <div id="Info"> 
-        {{ Datenbank[4059549000152].name }}
-        {{ Datenbank[4059549000152].Qualität }}
+       Produktname: {{ Datenbank[4059549000152].name }}
+       Preis: {{ Datenbank[4059549000152].preis }}
       </div>
     </div>
 </template>
@@ -29,7 +29,7 @@ export default {
       visible: false,
       Datenbank: { 
         4059549000152: {
-          name: "Atla", Qualität: "für alle Tafeln geeignet", BildURL: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg"
+          name: "Atla", preis: "1,99€", bildURL: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg"
        }
       }
     }
@@ -43,7 +43,7 @@ export default {
       if(result == "4059549000152"){
         console.log(this.Datenbank[4059549000152]);
         this.visible=true;
-        document.getElementById("ButtonID").style.background='#008000';;
+        document.getElementById("ButtonID").style.background='#008000';
       }  
     }
   }
@@ -58,8 +58,8 @@ export default {
   width: 150px;
   height: 150px;
 }
-#ButtonId{
-  color:green;
+#ButtonID{
+  background-color:rgb(128, 0, 0);
   text-align: left;
 }
 #ProduktFensterID {
