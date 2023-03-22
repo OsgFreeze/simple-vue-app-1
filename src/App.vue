@@ -39,6 +39,7 @@ export default {
       if(result == "4059549000152"){
         console.log(this.Datenbank[4059549000152]);
         this.visible=true;
+        document.getElementById("ButtonID").style.background='#008000';;
       }  
     }
   }
@@ -61,7 +62,7 @@ export default {
   background-color: blue;
 }
 #div2ID {
-  display: flexbox;
+  display: flex;
   flex-direction: row
 }
 
