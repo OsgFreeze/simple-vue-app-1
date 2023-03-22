@@ -13,7 +13,7 @@
       <div > 
         <img id="ProductPictureID" src='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg' /> 
       </div>
-      <div> 
+      <div id="Info"> 
         {{ Datenbank[4059549000152].name }}
         {{ Datenbank[4059549000152].Qualität }}
       </div>
@@ -63,13 +63,19 @@ export default {
   text-align: left;
 }
 #ProduktFensterID {
-  background-color: blue;
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  padding-top: 20px;
 }
+
+#Info{
+  text-align: center;
+}
+
 #div2ID {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  padding-top: 20px;
 }
 
 </style>
