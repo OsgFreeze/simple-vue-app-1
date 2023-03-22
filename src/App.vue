@@ -1,26 +1,13 @@
 <template>
-  <header>
-      <HelloWorld />
-      <StreamBarcodeReader
-      @decode="onDecode"
-      @loaded="onLoaded"
-      ></StreamBarcodeReader>
-  </header>
+    <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
 </template>
 
 <script>
-import HelloWorld from './components/Scanner.vue'
 import { StreamBarcodeReader } from "vue-barcode-reader";
 
-export default{
-  data() {
-        return {
-          data: 0
-        }
-      },
-      methods() {
-      },
-  }
+export default {
+  name: 'app',
+}
 </script>
 
 <style >
