@@ -6,14 +6,18 @@
 
     <div id="div2ID">
       <button id="ButtonID"> Recognized </button>
-      <p id="ScannDataID"> Information: {{ ScannData }}</p>
+      <p id="ScannDataID" style="padding-left: 30px"> Information: {{ ScannData }}</p>
     </div>
 
     <div id="ProduktFensterID" v-if="visible==true"> 
-      <img id="ProductPictureID" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg" /> 
-      {{ Datenbank[4059549000152] }}
+      <div > 
+        <img id="ProductPictureID" src='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg' /> 
+      </div>
+      <div> 
+        {{ Datenbank[4059549000152].name }}
+        {{ Datenbank[4059549000152].Qualität }}
+      </div>
     </div>
-    
 </template>
 
 <script>
@@ -25,7 +29,7 @@ export default {
       visible: false,
       Datenbank: { 
         4059549000152: {
-          name: "Atla", Qualität: "für alle Tafeln geeignet"
+          name: "Atla", Qualität: "für alle Tafeln geeignet", BildURL: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61MypS1KawL._AC_SS450_.jpg"
        }
       }
     }
@@ -60,6 +64,8 @@ export default {
 }
 #ProduktFensterID {
   background-color: blue;
+  display: flex;
+  flex-direction: row
 }
 #div2ID {
   display: flex;
